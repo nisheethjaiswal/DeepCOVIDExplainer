@@ -1,5 +1,5 @@
 ## DeepCOVIDExplainer: Explainable COVID-19 Diagnosis from Chest X-rays
-Supplementary materials for "DeepCOVIDExplainer: Explainable COVID-19 Diagnosis Based on Chest X-ray Images" submitted to IEEE International Conference on Data Science and Advanced Analytics (DSAA'2020) to be held virtually in Australia this year. We provide details of dataset, preprocessing, network architectures, and some additional results. Nevertheless, we'll provide trained models, preprocessed data, interactive Python notebooks, and a web application showing live demo. As planned, we keep this repo updated. 
+Supplementary materials for "DeepCOVIDExplainer: Explainable COVID-19 Diagnosis from Chest X-ray Images" submitted to IEEE International Conference on Bioinformatics and Biomedicine(BIBM'2020). We provide details of dataset, preprocessing, network architectures, and some additional results. Nevertheless, we'll provide trained models, preprocessed data, interactive Python notebooks, and a web application showing live demo. As planned, we keep this repo updated. 
 
 ### Datasets
 We consider 2 different versions of the datasets: first, we used the COVIDx v1.0 dataset by Wang et al. used to train and evaluate the COVID-Net, comprised of a total of 13,975 CXR images across 13,870 patient cases (as of June 6, 2020). COVIDx is mainly based on RSNA Pneumonia Detection Challenge (Link: https://www.kaggle.com/c/rsna-pneumonia-detection-challenge), ActualMed COVID-19 Chest X-ray Dataset Initiative (Link: https://github.com/agchung/Figure1-COVID-chestxray-dataset), COVID-19 radiography database (Link: https://www.kaggle.com/tawsifurrahman/covid19-radiography-database), giving 219 COVID-19 positive images, 1,341 normal images, and 1,345 viral pneuomonia images. This gives 358 CXR images from 266 COVID-19 patient cases and total of 8,066 patient cases who have no pneumonia (i.e., normal) and 5,538 patient cases who have non-COVID19 pneumonia. 
@@ -11,8 +11,7 @@ The updated dataset, which we refer to COVIDx v2.0 is categorized as normal (i.e
     3. Chest X-ray images by Ozturk et al. (Link: https://github.com/muhammedtalo/COVID-19), contains 125 COVID-19, 500 normal, and 500 pneumonia CXR images. 
     
 ### Methods
-The pipeline of "DeepCOVIDExplainer" consist of preprocessing, classification, snapshot neural ensemble, and decision visualizations.
-After necessary preprocessing of CXR images, DenseNet, ResNets, and VGGNets are trained in a transfer learning setting, creating their model snapshots, followed by neural snapshot ensemble based on averaging Softmax class posterior and the prediction maximization of best performing models. Finally, class-discriminating attention maps are generated using gradient-guided class activation maps (Grad-CAM++) and layer-wise relevance propagation (LRP) to provide explanations of the predictions and to identify the critical regions on patients chest.  
+The pipeline of "DeepCOVIDExplainer" consist of preprocessing, classification, snapshot neural ensemble, and decision visualizations. After necessary preprocessing of CXR images, DenseNet, ResNets, and VGGNets are trained in a transfer learning setting, creating their model snapshots, followed by neural snapshot ensemble based on averaging Softmax class posterior and the prediction maximization of best performing models. Finally, class-discriminating attention maps are generated using gradient-guided class activation maps (Grad-CAM++) and layer-wise relevance propagation (LRP) to provide explanations of the predictions and to identify the critical regions on patients chest.  
 
 ### Data availability
 We will open source the preprocessed data in npy file format to ease the community to build the model with ease. However, it'll take a few more days. 
@@ -29,7 +28,7 @@ If you use the code of this repository in your research, please consider citing 
     @inproceedings{DeepCOVIDExplainer,
         title={DeepCOVIDExplainer: Explainable COVID-19 Diagnosis based on Chest X-ray Images},
         author={Anonymized for review},
-        conference={IEEE International Conference on Data Science and Advanced Analytics (DSAA'2020)},
+        conference={IEEE International Conference on Bioinformatics and Biomedicine(BIBM'2020)},
         publisher={Under review},
         year={2020}
     }
